@@ -153,6 +153,11 @@ class AndroidFlutterLocalNotificationsPlugin
   Future<bool?> requestExactAlarmsPermission() async =>
       _channel.invokeMethod<bool>('requestExactAlarmsPermission');
 
+
+  /// only Android
+  Future<bool?> registerScheduleReceiver() async =>
+      _channel.invokeMethod<bool>('registerScheduleReceiver');
+
   /// Requests the permission for sending notifications. Returns whether the
   /// permission was granted.
   ///
